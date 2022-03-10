@@ -1,0 +1,542 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* this is the nav css start */
+nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 50px;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 0 10px rgba(226, 226, 226, 0.192);
+}
+nav .nav_right_elements {
+  position: relative;
+}
+
+nav .nav_right_elements ul {
+  position: relative;
+  display: flex;
+}
+
+.nav_right_elements ul li {
+  margin: 0 10px;
+  padding: 10px;
+  list-style: none;
+}
+.nav_right_elements ul li .listText {
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  padding: 8px 15px;
+  color: #000;
+}
+
+.activePage {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+  color: #000;
+}
+
+/* this is the nav css end */
+
+/* home page csss start */
+header {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .home_left_element {
+  display: flex;
+  flex-direction: column;
+}
+header .home_left_element h2 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+header .home_left_element p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: red;
+}
+header .home_left_element span {
+  margin: 10px 0;
+  opacity: 0.7;
+}
+
+header .home_left_element .getmoreBtn {
+  width: 35%;
+  font-size: 1.2rem;
+  height: 60px;
+  text-transform: capitalize;
+  outline: none;
+  border-radius: 40px;
+  color: rgb(117, 92, 255);
+  cursor: pointer;
+  border: 2px solid rgb(117, 92, 255);
+  transition-duration: 500ms;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .home_left_element .getmoreBtn:hover {
+  background-color: rgb(117, 92, 255);
+  color: #fff;
+}
+.ftr {
+  text-align: center;
+  text-transform: capitalize;
+  opacity: 0.5;
+}
+/* home page csss end */
+
+/* service css start */
+.heading {
+  opacity: 0.6;
+  font-size: 2.4rem;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  text-transform: capitalize;
+  width: 30%;
+  color: rgb(0, 0, 0, 0.7);
+}
+.service_box {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  z-index: 97;
+}
+.service_box .card {
+  width: 30%;
+  height: auto;
+  background-color: #fff;
+  padding: 30px;
+  transition-duration: 500ms;
+  margin: 20px;
+  position: relative;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  cursor: pointer;
+}
+
+.service_box .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 7px rgb(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+}
+.service_box .card img {
+  width: 120px;
+  height: 120px;
+  margin: 10px 0;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 100%;
+}
+.service_box .card h3 {
+  margin: 8px 0;
+  font-size: 2rem;
+  opacity: 0.5;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.service_box .card p {
+  margin: 8px 0;
+  font-size: 1rem;
+  opacity: 0.6;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.service_box .card button {
+  width: 40%;
+  height: 45px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border-radius: 40px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid rgb(97, 75, 221);
+  color: rgb(92, 68, 230);
+  position: relative;
+  overflow: hidden;
+  transition-duration: 300ms;
+}
+
+.service_box .card button::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(117, 92, 255);
+  top: 0;
+  left: 0;
+  transition-duration: 300ms;
+}
+.service_box .card button::after {
+  content: "learn more";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 300ms;
+  opacity: 0;
+}
+.service_box .card button:hover::before {
+  width: 100%;
+}
+.service_box .card button:hover::after {
+  opacity: 1;
+}
+
+.abt {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+}
+.abt .abt_left_element {
+  display: flex;
+  flex-direction: column;
+}
+
+.abt .abt_left_element h2 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.abt .abt_left_element p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: rgba(0, 0, 0, 0.534);
+}
+
+.abt .abt_left_element span {
+  margin: 10px 0;
+  opacity: 0.7;
+}
+
+.abt .abt_left_element .getmoreBtn {
+  width: 35%;
+  font-size: 1.2rem;
+  height: 60px;
+  text-transform: capitalize;
+  outline: none;
+  border-radius: 40px;
+  color: rgb(117, 92, 255);
+  cursor: pointer;
+  border: 2px solid rgb(117, 92, 255);
+  transition-duration: 500ms;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.abt .abt_left_element .getmoreBtn:hover {
+  background-color: rgb(117, 92, 255);
+  color: #fff;
+}
+
+/* service css end */
+
+/* contact css start */
+.ctnHeadp {
+  text-align: center;
+  margin: 10px;
+  font: 1.2rem;
+  text-transform: capitalize;
+  font-weight: lighter;
+  color: rgb(0, 0, 0, 0.4);
+  position: relative;
+  top: 30px;
+}
+
+form {
+  margin: 30px 0;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+form .form_control {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.form_control input {
+  width: 100%;
+  height: 45px;
+  margin: 5px 0;
+  padding: 2px 15px;
+  border: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  border-radius: 5px;
+}
+
+.form_control label {
+  /* margin-left: 10px; */
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+
+.form_control textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px 15px;
+  border: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  border-radius: 5px;
+}
+form button {
+  position: relative;
+  font-size: 1.1rem;
+  padding: 15px 25px;
+  text-transform: capitalize;
+  font-weight: lighter;
+  cursor: pointer;
+  background-color: rgb(15, 153, 15);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition-duration: 100ms;
+}
+
+form button:hover {
+  background-color: rgb(0, 119, 0);
+}
+
+/* contact css end */
+.shorterMenu{
+  display: none;
+}
+/* error page is start */
+.errorTemp{
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 120px;
+}
+
+.img_tb{
+  width: 400px;
+  height: 400px;
+  padding: 50px;
+  background-color: rgb(246, 245, 248);
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 100%;
+  position: absolute;
+  left: -200px;
+}
+.errorSadimg{
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.text_tb{
+  width: 80%;
+  position: relative;
+  left: 70px;
+  top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.text_tb h2{
+  font-size: 5rem;
+  margin: 3px 0;
+}
+.text_tb p{
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+.text_tb span{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 3px 0;
+  text-align: justify;
+
+}
+
+.errorHome{
+  margin: 10px 0;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+/* error page is end */
+
+/* this is the media quries */
+@media (max-width:768px) {
+  .nav_right_elements{
+    display: none;
+  }
+  .shorterMenu{
+    top: 0;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    position: absolute;
+    right: 0%;
+    display: block;
+    
+    /* background-color: red; */
+    border-radius: 5px;
+  }
+  .shorterMenu .togglerBtn{
+    position: absolute;
+    right: 6%;
+    top: 20px;
+    font-size: 2rem;
+    padding: 0 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+  }
+  .shorterMenu .togglerBtn::before{
+    position: absolute;
+    content: '-';
+    top: -6px;
+    font-size: 2rem;
+  }
+  .shorterMenu .togglerBtn::after{
+    position: absolute;
+    content: '-';
+    top: 6px;
+    font-size: 2rem;
+  }
+
+  .nav_left_elements h2{
+    position: absolute;
+    left: 3%;
+  }
+  .phnMenu{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    display: none;
+  }
+  .phoneMenu{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgb(0,0,0,.2);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .phoneMenu ul li {
+    margin: 0 10px;
+    padding: 10px;
+    list-style: none;
+  }
+  .phoneMenu ul li .listText {
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding: 8px 15px;
+    color: #000;
+  }
+  header {
+    padding-left: 20px;
+    flex-direction: column;
+  }
+  .home_right_element img{
+    width: 150px;
+  }
+  .heading{
+    width: 70%;
+  }
+  .service_box{
+    flex-direction: column;
+  }
+  .card{
+    width: 90%!important;
+  }
+  .abt{
+    flex-direction: column;
+  }
+  .abt .abt_left_element{
+    top: 50px;
+    position: relative;
+    padding: 30px;
+  }
+  .abt .abt_left_element p{
+    font-size: .9rem;
+  }
+  .abt_right_element img{
+    width: 230px;
+  }
+
+  form{
+    width: 90%;
+  }
+
+}
